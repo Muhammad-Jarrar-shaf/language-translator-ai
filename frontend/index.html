@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Translation Studio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>AI Translation Studio</h1>
+
+            <p class="subtitle">
+                Powered by MarianMT Transformers
+            </p>
+
+        </div>
+
+        <div class="language-controls">
+
+            <select id="source-language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+            </select>
+
+            <button id="swap-btn">
+                ⇄
+            </button>
+
+            <select id="target-language">
+                <option value="es">Spanish</option>
+                <option value="en">English</option>
+            </select>
+
+        </div>
+
+        <div class="section-title">
+            Input Text
+        </div>
+
+        <textarea
+            id="input-text"
+            placeholder="Enter text to translate..."
+        ></textarea>
+
+        <div class="char-count">
+            <span id="char-counter">0</span>/1000
+        </div>
+
+        <button id="translate-btn">
+            Translate
+        </button>
+
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <span>Translating...</span>
+        </div>
+
+        <div class="section-title">
+            Translation Result
+        </div>
+
+        <textarea
+            id="output-text"
+            placeholder="Translation will appear here..."
+            readonly
+        ></textarea>
+
+        <button id="copy-btn">
+            Copy Translation
+        </button>
+
+        <div class="history-section">
+
+            <h3>Recent Translations</h3>
+
+            <div id="history-list"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
